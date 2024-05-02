@@ -11,7 +11,7 @@ var deeplRequestData = {
     };
 
 const server = http.createServer(function(request, response){
-    if(request.method == "POST" && request.headers('checker-header' === 'translate-please')){
+    if(request.method == "POST" && request.headers['checker-header'] === 'translate-please'){
         response.end('received post request');
         deeplRequestData = request;
     }
@@ -26,7 +26,7 @@ const server = http.createServer(function(request, response){
 //     target_lang: 'ZH'
 // };
 
-function deeplTranslate(deeplRequestData, translatedData){
+function deeplTranslate(deeplRequestData){
     // Set up the Axios POST request
     axios.post(apiUrl, deeplRequestData, {
         headers: {
