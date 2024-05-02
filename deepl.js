@@ -1,7 +1,7 @@
 ﻿// Import the axios library
 const axios = require('axios');
 const http = require('http');
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 10000;
 
 const apiUrl = 'https://api-free.deepl.com/v2/translate';
 const deeplAuthKey = process.env.deeplAuthKey;
@@ -13,7 +13,7 @@ const server = http.createServer(function(request, response){
         //deeplRequestData = request;
     }
     //deeplTranslate(deeplRequestData);
-}).listen(4000);
+}).listen(port);
 
 //var text = ;
 
