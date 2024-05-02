@@ -15,7 +15,7 @@ const server = http.createServer(function(request, response){
         //deeplRequestData = request;
     }
     deeplTranslate(deeplRequestData);
-    //response.end('received post request');
+    response.end('received post request');
 }).listen(port);
 
 //var text = ;
