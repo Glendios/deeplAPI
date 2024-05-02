@@ -1,7 +1,16 @@
 ﻿// Import the axios library
 const axios = require('axios');
 const http = require('http');
+const cors = require('cors');
+const express = require('express');
 const port = process.env.PORT || 10000;
+
+const corsOptions = {
+    origin: 'https://kurosakinoel.com',
+    optionsSuccessStatus: 200
+};
+const app = express();
+app.use(cors(corsOptions));
 
 const apiUrl = 'https://api-free.deepl.com/v2/translate';
 const deeplAuthKey = process.env.deeplAuthKey;
