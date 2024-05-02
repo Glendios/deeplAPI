@@ -10,9 +10,9 @@ var deeplRequestData = undefined;
 const server = http.createServer(function(request, response){
     if(request.method == "POST"){
         response.end('received post request');
-        //deeplRequestData = request;
+        deeplRequestData = request;
     }
-    //deeplTranslate(deeplRequestData);
+    deeplTranslate(deeplRequestData);
 }).listen(port);
 
 //var text = ;
