@@ -11,6 +11,7 @@ const corsOptions = {
 };
 const app = express();
 app.use(cors(corsOptions));
+//app.use(corrs());
 
 const apiUrl = 'https://api-free.deepl.com/v2/translate';
 const deeplAuthKey = process.env.deeplAuthKey;
