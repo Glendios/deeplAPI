@@ -34,11 +34,10 @@ function deeplTranslate(deeplRequestData){
             'Content-Type': 'application/x-www-form-urlencoded'
         }
     })
-    // .then(response => {
-    //     console.log('Response:', response.data);
-    //     //console.log('Response:', translatedData);
-    // })
-    // .catch(error => {
-    //     console.error('Error:', error);
-    // });
+     .then(response => {
+         console.log('Response:', response.data);
+     })
+     .catch(error => {
+         console.error('Error:', error);
+     });
 }
