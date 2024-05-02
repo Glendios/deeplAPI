@@ -12,10 +12,10 @@ var deeplRequestData = {
 
 const server = http.createServer(function(request, response){
     if(request.method == "POST" && request.headers['checker-header'] === 'translate-please'){
-        response.end('received post request');
         deeplRequestData = request;
     }
     deeplTranslate(deeplRequestData);
+    //response.end('received post request');
 }).listen(port);
 
 //var text = ;
