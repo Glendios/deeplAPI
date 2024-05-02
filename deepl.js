@@ -5,7 +5,10 @@ const port = process.env.PORT || 10000;
 
 const apiUrl = 'https://api-free.deepl.com/v2/translate';
 const deeplAuthKey = process.env.deeplAuthKey;
-var deeplRequestData = undefined;
+var deeplRequestData = {
+    text: 'Hello, world!',
+    target_lang: 'ZH'
+    };
 
 const server = http.createServer(function(request, response){
     if(request.method == "POST"){
