@@ -45,11 +45,6 @@ app.post('/translate', (req, res) => {
     }
 });
 
-// Start the Express server
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
-
 // Function to translate using DeepL API
 function deeplTranslate(deeplRequestData) {
     return axios.post(apiUrl, deeplRequestData, {
