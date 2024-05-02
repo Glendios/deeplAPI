@@ -55,7 +55,7 @@ function deeplTranslate(deeplRequestData) {
     return axios.post(apiUrl, deeplRequestData, {
         headers: {
             'Authorization': `DeepL-Auth-Key ${deeplAuthKey}`,
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/json'
         }
     });
 }
