@@ -13,7 +13,7 @@ const server = http.createServer(function(request, response){
         deeplRequestData = request;
     }
     deeplTranslate(deeplRequestData);
-});
+}).listen(4000);
 
 //var text = ;
 
