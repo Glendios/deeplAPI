@@ -25,6 +25,11 @@ app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
 
+//get endpoint
+app.get('/', (req, res) => {
+    res.send('Hello, this is the KRSK DeepL API server!');
+});
+
 // Endpoint to handle translation requests
 app.post('/translate', (req, res) => {
     // Assuming the request body contains the necessary data
