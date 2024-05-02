@@ -11,7 +11,7 @@ var deeplRequestData = {
     };
 
 const server = http.createServer(function(request, response){
-    if(request.method == "POST"){
+    if(request.method == "POST" && request.headers('checker-header' === 'translate-please')){
         response.end('received post request');
         deeplRequestData = request;
     }
@@ -34,11 +34,11 @@ function deeplTranslate(deeplRequestData, translatedData){
             'Content-Type': 'application/x-www-form-urlencoded'
         }
     })
-    .then(response => {
-        console.log('Response:', response.data);
-        //console.log('Response:', translatedData);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+    // .then(response => {
+    //     console.log('Response:', response.data);
+    //     //console.log('Response:', translatedData);
+    // })
+    // .catch(error => {
+    //     console.error('Error:', error);
+    // });
 }
