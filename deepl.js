@@ -5,7 +5,7 @@ const axios = require('axios');
 const apiUrl = 'https://api-free.deepl.com/v2/translate';
 
 // Define your DeepL API key
-//const deeplAuthKey = '5e4bfeac-76b7-45a5-85da-434cb0024bd6:fx'; // Replace 'yourdeeplAuthKey' with your actual API key
+const deeplAuthKey = process.env.deeplAuthKey;
 
 // Define the data to be sent in the request
 const requestData = {
