@@ -13,7 +13,8 @@ const corsOptions = {
     optionsSuccessStatus: 200
 };
 
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 const deeplRequestData = {
@@ -54,8 +55,7 @@ app.post('/translate', (req, res) => {
 function deeplTranslate(deeplRequestData) {
     return axios.post(apiUrl, deeplRequestData, {
         headers: {
-            'Authorization': `DeepL-Auth-Key ${deeplAuthKey}`,
-            'Content-Type': 'application/json'
+            'Authorization': `DeepL-Auth-Key ${deeplAuthKey}`
         }
     });
 }
